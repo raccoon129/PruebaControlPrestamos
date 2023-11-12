@@ -1,0 +1,82 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #0b4388 50%, #0099ff 50%);
+    background-size: 188% 200%;
+    animation: animacionGradiente 15s ease infinite;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* Cuerpo del formulario */
+.formulario-login, .informacion-formulario {
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    text-align: center;
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Los recuadros donde se ingresa el usuario y contraseña */
+.grupo-formulario input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #cccccc9c;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #239ee6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6dd5ed;
+}
+
+@keyframes animacionGradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animaciones y responsividad */
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    .formulario-login, .informacion-formulario {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+    .informacion-formulario {
+        margin-bottom: 0;
+    }
+}

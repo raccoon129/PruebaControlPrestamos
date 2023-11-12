@@ -1,0 +1,106 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #06264d 50%, #00548b 50%);
+    background-size: 188% 200%;
+    animation: animacionGradiente 15s ease infinite;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+}
+
+/* Cuerpo del formulario */
+.formulario-login, .informacion-formulario {
+    width: 30%;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    text-align: center;
+    margin: 10px; /* Añade un poco de espacio entre los formularios */
+}
+
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label, .grupo-formulario input, button  {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Los recuadros donde se ingresa el usuario y contraseña */
+.grupo-formulario input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #cccccc9c;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #239ee6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6dd5ed;
+}
+
+@keyframes animacionGradiente {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+    .formulario-login, .informacion-formulario {
+        width: 80%; /* Aumenta el ancho en dispositivos móviles para mejor legibilidad */
+        margin-bottom: 20px; /* Añade más espacio entre los formularios */
+    }
+
+    .grupo-formulario label, .grupo-formulario input, button {
+        font-size: 1.1em; /* Aumenta el tamaño de fuente para mejor legibilidad */
+    }
+}
+
+/* Considera agregar estilos adicionales para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .formulario-login, .informacion-formulario {
+        width: 95%; /* Utiliza casi todo el ancho disponible */
+    }
+
+    .grupo-formulario label, .grupo-formulario input, button {
+        font-size: 1.2em; /* Aumenta aún más el tamaño de fuente */
+    }
+}
+
+
+
+/* Contenido Principal */
+.contenido-principal {
+    margin-left: 200px; /* Ajusta según el ancho de tu barra lateral */
+    margin-top: 60px; /* Ajusta según la altura de tu encabezado */
+    padding: 20px; /* Espacio interior para que el contenido no toque los bordes del div */
+    height: calc(100vh - 60px - 40px); /* 100% del alto de la ventana menos la altura del encabezado y del pie de página */
+    overflow-y: auto; /* Añade scroll vertical si el contenido es muy largo */
+}
